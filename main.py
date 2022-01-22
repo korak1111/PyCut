@@ -29,6 +29,14 @@ def file_save(name, counter):
     return counter
 
 
+def minimize():
+    keyboard.press(Key.cmd)
+    keyboard.press(Key.down)
+    keyboard.release(Key.cmd)
+    keyboard.release(Key.down)
+
+
+
 # location = input("Where do you want to save the files?")
 name = input("File name starts with: ")
 start = int(input("Start at: "))
@@ -40,8 +48,5 @@ while True:
     sleep(3)
     counter = file_save(name, counter)
     sleep(0.5)
-    keyboard.press(Key.cmd)
-    keyboard.press(Key.down)
-    keyboard.release(Key.cmd)
-    keyboard.release(Key.down)
+    minimize()
     sleep(1.5)
